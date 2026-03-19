@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pure CSS Modal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="hero">
+    <h1>Pure CSS Modal Popup</h1>
+    <p>No JavaScript — powered by the <code>:target</code> pseudo-class.</p>
+    <a href="#modal-info" class="btn">Open Info Modal</a>
+    <a href="#modal-confirm" class="btn btn--danger">Open Confirm Modal</a>
+  </main>
+
+  <!-- Modal 1: Info -->
+  <div id="modal-info" class="modal-overlay">
+    <div class="modal">
+      <a href="#" class="modal__close" aria-label="Close">&times;</a>
+      <div class="modal__icon modal__icon--info">&#8505;</div>
+      <h2 class="modal__title">Information</h2>
+      <p class="modal__body">
+        This modal is built using only HTML and CSS. The <code>:target</code>
+        pseudo-class targets the element whose <code>id</code> matches the
+        URL fragment, making it visible without any JavaScript.
+      </p>
+      <div class="modal__actions">
+        <a href="#" class="btn">Got it</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Confirm -->
+  <div id="modal-confirm" class="modal-overlay">
+    <div class="modal">
+      <a href="#" class="modal__close" aria-label="Close">&times;</a>
+      <div class="modal__icon modal__icon--danger">&#9888;</div>
+      <h2 class="modal__title">Are you sure?</h2>
+      <p class="modal__body">
+        This action cannot be undone. Please confirm that you want to
+        proceed with deleting this item permanently.
+      </p>
+      <div class="modal__actions">
+        <a href="#" class="btn btn--danger">Delete</a>
+        <a href="#" class="btn btn--outline">Cancel</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

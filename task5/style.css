@@ -1,0 +1,191 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+code {
+  background-color: #e8ecf4;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.25rem;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: #1a1a2e;
+}
+
+.hero p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  background-color: #4a6cf7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  background-color: #3451d1;
+  transform: translateY(-1px);
+}
+
+.btn--danger {
+  background-color: #e53e3e;
+}
+
+.btn--danger:hover {
+  background-color: #c53030;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #4a6cf7;
+  border: 2px solid #4a6cf7;
+}
+
+.btn--outline:hover {
+  background-color: #4a6cf7;
+  color: #fff;
+}
+
+/* ── Modal overlay ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;                          /* top/right/bottom/left: 0 */
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 200;
+
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show when targeted */
+.modal-overlay:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ── Modal box ── */
+.modal {
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  padding: 2rem 2rem 1.75rem;
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  text-align: center;
+
+  /* Slide-up + scale entrance */
+  transform: translateY(30px) scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay:target .modal {
+  transform: translateY(0) scale(1);
+}
+
+/* ── Close button ── */
+.modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  font-size: 1.6rem;
+  color: #999;
+  text-decoration: none;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.modal__close:hover {
+  color: #333;
+}
+
+/* ── Icon ── */
+.modal__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin: 0 auto 1rem;
+}
+
+.modal__icon--info {
+  background-color: #ebf0ff;
+  color: #4a6cf7;
+}
+
+.modal__icon--danger {
+  background-color: #fff5f5;
+  color: #e53e3e;
+}
+
+/* ── Content ── */
+.modal__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.6rem;
+}
+
+.modal__body {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.modal__actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .modal {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+}
