@@ -17,7 +17,6 @@ code {
   font-size: 0.9em;
 }
 
-/* ── Hero ── */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -39,7 +38,6 @@ code {
   font-size: 1rem;
 }
 
-/* ── Buttons ── */
 .btn {
   display: inline-block;
   padding: 0.65rem 1.5rem;
@@ -76,30 +74,25 @@ code {
   color: #fff;
 }
 
-/* ── Modal overlay ── */
 .modal-overlay {
   position: fixed;
-  inset: 0;                          /* top/right/bottom/left: 0 */
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
   z-index: 200;
-
-  /* Hidden by default */
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-/* Show when targeted */
 .modal-overlay:target {
   opacity: 1;
   visibility: visible;
 }
 
-/* ── Modal box ── */
 .modal {
   background-color: #fff;
   border-radius: 14px;
@@ -109,8 +102,6 @@ code {
   max-width: 440px;
   position: relative;
   text-align: center;
-
-  /* Slide-up + scale entrance */
   transform: translateY(30px) scale(0.95);
   transition: transform 0.3s ease;
 }
@@ -119,7 +110,6 @@ code {
   transform: translateY(0) scale(1);
 }
 
-/* ── Close button ── */
 .modal__close {
   position: absolute;
   top: 0.75rem;
@@ -135,7 +125,6 @@ code {
   color: #333;
 }
 
-/* ── Icon ── */
 .modal__icon {
   width: 56px;
   height: 56px;
@@ -157,7 +146,6 @@ code {
   color: #e53e3e;
 }
 
-/* ── Content ── */
 .modal__title {
   font-size: 1.3rem;
   font-weight: 700;
@@ -179,7 +167,6 @@ code {
   flex-wrap: wrap;
 }
 
-/* ── Mobile ── */
 @media (max-width: 480px) {
   .modal {
     padding: 1.5rem 1.25rem;

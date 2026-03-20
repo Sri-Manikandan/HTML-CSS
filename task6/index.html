@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabbed Interface</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="page">
+    <h1 class="page__title">Pure CSS Tabs</h1>
+
+    <div class="tabs">
+
+      <input type="radio" name="tabs" id="tab-home" class="tabs__radio" checked />
+      <input type="radio" name="tabs" id="tab-about" class="tabs__radio" />
+      <input type="radio" name="tabs" id="tab-services" class="tabs__radio" />
+      <input type="radio" name="tabs" id="tab-contact" class="tabs__radio" />
+
+      <div class="tabs__bar" role="tablist">
+        <label for="tab-home"    class="tabs__label" role="tab">Home</label>
+        <label for="tab-about"   class="tabs__label" role="tab">About</label>
+        <label for="tab-services" class="tabs__label" role="tab">Services</label>
+        <label for="tab-contact" class="tabs__label" role="tab">Contact</label>
+      </div>
+
+      <div class="tabs__panels">
+
+        <div class="tabs__panel" id="panel-home" role="tabpanel">
+          <div class="tabs__panel-icon">🏠</div>
+          <h2 class="tabs__panel-title">Welcome</h2>
+          <p class="tabs__panel-body">
+            We help teams ship better products faster. From strategy to execution,
+            our work speaks for itself.
+          </p>
+        </div>
+
+        <div class="tabs__panel" id="panel-about" role="tabpanel">
+          <div class="tabs__panel-icon">👤</div>
+          <h2 class="tabs__panel-title">About Us</h2>
+          <p class="tabs__panel-body">
+            Founded in 2018, we are a small team of designers and engineers who care
+            deeply about craft, accessibility, and performance.
+          </p>
+        </div>
+
+        <div class="tabs__panel" id="panel-services" role="tabpanel">
+          <div class="tabs__panel-icon">⚙️</div>
+          <h2 class="tabs__panel-title">Our Services</h2>
+          <p class="tabs__panel-body">
+            We offer web design, front-end development, and UX audits.
+            Every engagement is tailored to your goals and timeline.
+          </p>
+        </div>
+
+        <div class="tabs__panel" id="panel-contact" role="tabpanel">
+          <div class="tabs__panel-icon">✉️</div>
+          <h2 class="tabs__panel-title">Get in Touch</h2>
+          <p class="tabs__panel-body">
+            Have a project in mind? Drop us a line at
+            <strong>hello@example.com</strong> and we will get back to you within one business day.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

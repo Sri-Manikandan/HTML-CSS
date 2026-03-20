@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Accordion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="accordion-page">
+    <h1 class="accordion-page__title">Frequently Asked Questions</h1>
+    <div class="accordion">
+
+      <div class="accordion__item">
+        <input class="accordion__input" type="checkbox" id="item1">
+        <label class="accordion__label" for="item1">
+          What is CSS Grid and when should I use it?
+          <span class="accordion__icon"></span>
+        </label>
+        <div class="accordion__panel">
+          <div class="accordion__content">
+            CSS Grid is a two-dimensional layout system that lets you arrange elements in rows and columns simultaneously. Use it when you need precise control over both axes — for example, full-page layouts, card galleries, or any design where items need to align across rows and columns. Grid shines when your layout is defined by the container rather than the content.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <input class="accordion__input" type="checkbox" id="item2">
+        <label class="accordion__label" for="item2">
+          How does Flexbox differ from CSS Grid?
+          <span class="accordion__icon"></span>
+        </label>
+        <div class="accordion__panel">
+          <div class="accordion__content">
+            Flexbox is a one-dimensional layout model — it handles either a row or a column at a time. It is ideal for distributing space among items in a single axis, such as navigation bars, button groups, or centering content. Grid handles two dimensions simultaneously and is better suited for complex page-level structures. The two are complementary and often used together.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <input class="accordion__input" type="checkbox" id="item3">
+        <label class="accordion__label" for="item3">
+          What are CSS custom properties and how do they work?
+          <span class="accordion__icon"></span>
+        </label>
+        <div class="accordion__panel">
+          <div class="accordion__content">
+            CSS custom properties, also called CSS variables, let you store values under a name prefixed with two dashes, such as --primary-color. You declare them on an element (typically :root for global scope) and reference them with var(--primary-color). Unlike preprocessor variables, they are live in the browser, can be overridden in any scope, and are accessible from JavaScript, making them powerful for theming and dynamic styling.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <input class="accordion__input" type="checkbox" id="item4">
+        <label class="accordion__label" for="item4">
+          What is the CSS box model?
+          <span class="accordion__icon"></span>
+        </label>
+        <div class="accordion__panel">
+          <div class="accordion__content">
+            Every element in CSS is represented as a rectangular box consisting of four layers: content, padding, border, and margin. By default, width and height apply only to the content area, so padding and border add to the total size. Setting box-sizing: border-box makes width and height include padding and border, which is far more predictable and is why it is included in most CSS resets today.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <input class="accordion__input" type="checkbox" id="item5">
+        <label class="accordion__label" for="item5">
+          How do CSS transitions and animations differ?
+          <span class="accordion__icon"></span>
+        </label>
+        <div class="accordion__panel">
+          <div class="accordion__content">
+            Transitions respond to state changes — they interpolate a property from its current value to a new value when triggered by an event like hover or focus. You define the property, duration, easing, and delay. Animations, defined with @keyframes, run independently of state changes and can loop, alternate, and contain multiple steps. Use transitions for simple interactive feedback and animations for choreographed sequences that run on their own.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <input class="accordion__input" type="checkbox" id="item6">
+        <label class="accordion__label" for="item6">
+          What is specificity in CSS and how is it calculated?
+          <span class="accordion__icon"></span>
+        </label>
+        <div class="accordion__panel">
+          <div class="accordion__content">
+            Specificity determines which CSS rule applies when multiple rules target the same element. It is calculated as a three-part score: ID selectors contribute 1-0-0, class, attribute, and pseudo-class selectors contribute 0-1-0, and type selectors and pseudo-elements contribute 0-0-1. The selector with the highest score wins. Inline styles outrank all selectors, and !important overrides everything. Keeping specificity low and consistent — typically by relying on classes — makes stylesheets easier to maintain.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</body>
+</html>

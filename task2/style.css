@@ -18,7 +18,6 @@ body {
   padding: 2rem;
 }
 
-/* Card base */
 .card {
   width: 320px;
   background-color: #fff;
@@ -30,13 +29,11 @@ body {
   cursor: pointer;
 }
 
-/* Hover effect: lift + deeper shadow */
 .card:hover {
   transform: scale(1.04);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
-/* Image */
 .card__image {
   width: 100%;
   height: 200px;
@@ -49,7 +46,6 @@ body {
   filter: brightness(1.08);
 }
 
-/* Body */
 .card__body {
   padding: 1.25rem 1.5rem 1.5rem;
 }
@@ -68,7 +64,6 @@ body {
   margin-bottom: 1.25rem;
 }
 
-/* Button */
 .card__btn {
   display: inline-block;
   padding: 0.5rem 1.25rem;

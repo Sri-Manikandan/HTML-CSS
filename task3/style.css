@@ -25,14 +25,12 @@ body {
   text-align: center;
 }
 
-/* ── Grid: 3 columns on desktop ── */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
-/* ── Card ── */
 .card {
   background-color: #fff;
   border: 1px solid #e0e0e0;
@@ -77,19 +75,7 @@ body {
   color: #555;
 }
 
-/* ── Tablet: 2 columns ── */
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* ── Mobile: 1 column ── */
 @media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
   .heading {
     font-size: 1.5rem;
   }

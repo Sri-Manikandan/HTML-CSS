@@ -1,0 +1,133 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.page {
+  width: 100%;
+  max-width: 680px;
+  text-align: center;
+}
+
+.page__title {
+  font-size: 2rem;
+  color: #1a1a2e;
+  margin-bottom: 0.4rem;
+}
+
+.tabs__radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.tabs__bar {
+  display: flex;
+  background-color: #fff;
+  border-radius: 12px 12px 0 0;
+  border: 1px solid #e0e4ef;
+  border-bottom: none;
+  overflow: hidden;
+}
+
+.tabs__label {
+  flex: 1;
+  padding: 0.85rem 0.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #777;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+  user-select: none;
+}
+
+.tabs__label:hover {
+  color: #4a6cf7;
+  background-color: #f5f7ff;
+}
+
+#tab-home:checked    ~ .tabs__bar label[for="tab-home"],
+#tab-about:checked   ~ .tabs__bar label[for="tab-about"],
+#tab-services:checked ~ .tabs__bar label[for="tab-services"],
+#tab-contact:checked ~ .tabs__bar label[for="tab-contact"] {
+  color: #4a6cf7;
+  border-bottom-color: #4a6cf7;
+  background-color: #f5f7ff;
+}
+
+.tabs__panels {
+  background-color: #fff;
+  border: 1px solid #e0e4ef;
+  border-radius: 0 0 12px 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.tabs__panel {
+  grid-area: 1 / 1;
+  padding: 2.5rem 2rem;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(10px);
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+#tab-home:checked    ~ .tabs__panels #panel-home,
+#tab-about:checked   ~ .tabs__panels #panel-about,
+#tab-services:checked ~ .tabs__panels #panel-services,
+#tab-contact:checked ~ .tabs__panels #panel-contact {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.tabs__panel-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.tabs__panel-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.75rem;
+}
+
+.tabs__panel-body {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #555;
+}
+
+@media (max-width: 480px) {
+  .page__title {
+    font-size: 1.5rem;
+  }
+
+  .tabs__label {
+    font-size: 0.82rem;
+    padding: 0.7rem 0.25rem;
+  }
+
+  .tabs__panel {
+    padding: 1.5rem 1.25rem;
+  }
+}

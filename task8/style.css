@@ -1,0 +1,121 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #fff;
+  color: #1a1a2e;
+  min-height: 100vh;
+}
+
+.accordion-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.accordion-page__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion__item {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e8eaf0;
+  box-shadow: 0 2px 8px rgba(26, 26, 46, 0.06);
+  overflow: hidden;
+}
+
+.accordion__input {
+  display: none;
+}
+
+.accordion__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.accordion__label:hover {
+  background: #f5f6ff;
+  color: #4a6cf7;
+}
+
+.accordion__icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-left: 16px;
+  position: relative;
+}
+
+.accordion__icon::before,
+.accordion__icon::after {
+  content: "";
+  position: absolute;
+  background: #4a6cf7;
+  border-radius: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.accordion__icon::before {
+  width: 12px;
+  height: 2px;
+}
+
+.accordion__icon::after {
+  width: 2px;
+  height: 12px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.accordion__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.accordion__content {
+  padding: 0 24px 20px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.accordion__input:checked + .accordion__label {
+  color: #4a6cf7;
+  background: #f5f6ff;
+  border-bottom: 1px solid #e4e8ff;
+}
+
+.accordion__input:checked + .accordion__label .accordion__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0;
+}
+
+.accordion__input:checked ~ .accordion__panel {
+  max-height: 500px;
+}

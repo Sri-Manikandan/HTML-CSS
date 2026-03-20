@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Page Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <input type="checkbox" id="nav-toggle" class="nav__toggle-input" />
+
+  <section id="about" class="page page--about">
+    <div class="page__inner">
+      <div class="about">
+        <div class="about__text">
+          <span class="section__label">About Me</span>
+          <h2 class="section__title">Passionate about crafting the web</h2>
+          <p class="about__body">I am a front-end developer with a love for pixel-perfect interfaces and smooth user experiences. I specialise in HTML, CSS, and modern JavaScript, turning designs into fast, accessible web applications.</p>
+          <p class="about__body">When I am not coding, you will find me exploring design systems, contributing to open source, or sketching wireframes for the next big idea.</p>
+          <div class="about__stats">
+            <div class="stat">
+              <span class="stat__number">5+</span>
+              <span class="stat__label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">40+</span>
+              <span class="stat__label">Projects Done</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">20+</span>
+              <span class="stat__label">Happy Clients</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__skills">
+          <span class="section__label">Skills</span>
+          <ul class="skill-list">
+            <li class="skill-list__item">HTML &amp; CSS</li>
+            <li class="skill-list__item">JavaScript</li>
+            <li class="skill-list__item">React</li>
+            <li class="skill-list__item">Figma</li>
+            <li class="skill-list__item">Git</li>
+            <li class="skill-list__item">Node.js</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="page page--portfolio">
+    <div class="page__inner">
+      <span class="section__label">My Work</span>
+      <h2 class="section__title">Featured Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card__thumb card__thumb--1"></div>
+          <div class="card__body">
+            <h3 class="card__title">E-Commerce Platform</h3>
+            <p class="card__desc">A full-featured online store with product filtering and cart management.</p>
+            <div class="card__tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__thumb card__thumb--2"></div>
+          <div class="card__body">
+            <h3 class="card__title">Design System</h3>
+            <p class="card__desc">A reusable component library built with accessibility in mind.</p>
+            <div class="card__tags">
+              <span class="tag">CSS</span>
+              <span class="tag">Storybook</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__thumb card__thumb--3"></div>
+          <div class="card__body">
+            <h3 class="card__title">Analytics Dashboard</h3>
+            <p class="card__desc">Real-time data visualisation with responsive charts and filters.</p>
+            <div class="card__tags">
+              <span class="tag">D3.js</span>
+              <span class="tag">API</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__thumb card__thumb--4"></div>
+          <div class="card__body">
+            <h3 class="card__title">Travel Blog</h3>
+            <p class="card__desc">A content-rich travel journal with an editorial layout and rich media.</p>
+            <div class="card__tags">
+              <span class="tag">CMS</span>
+              <span class="tag">SEO</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__thumb card__thumb--5"></div>
+          <div class="card__body">
+            <h3 class="card__title">Mobile Banking App</h3>
+            <p class="card__desc">Secure, intuitive UI for managing personal finances on the go.</p>
+            <div class="card__tags">
+              <span class="tag">UX</span>
+              <span class="tag">Figma</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__thumb card__thumb--6"></div>
+          <div class="card__body">
+            <h3 class="card__title">Booking Platform</h3>
+            <p class="card__desc">End-to-end appointment scheduling with calendar sync and reminders.</p>
+            <div class="card__tags">
+              <span class="tag">Calendar</span>
+              <span class="tag">REST</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="page page--contact">
+    <div class="page__inner">
+      <div class="contact">
+        <div class="contact__info">
+          <span class="section__label">Get In Touch</span>
+          <h2 class="section__title">Let's work together</h2>
+          <p class="contact__body">Have a project in mind? I would love to hear about it. Send me a message and I will get back to you as soon as possible.</p>
+          <ul class="contact__list">
+            <li class="contact__item">
+              <span class="contact__icon">&#9993;</span>
+              <span>hello@myportfolio.dev</span>
+            </li>
+            <li class="contact__item">
+              <span class="contact__icon">&#9742;</span>
+              <span>+1 (555) 000-1234</span>
+            </li>
+            <li class="contact__item">
+              <span class="contact__icon">&#9679;</span>
+              <span>San Francisco, CA</span>
+            </li>
+          </ul>
+        </div>
+        <div class="contact__form">
+          <div class="form-field">
+            <label class="form-field__label" for="name">Name</label>
+            <input class="form-field__input" type="text" id="name" placeholder="Your name" />
+          </div>
+          <div class="form-field">
+            <label class="form-field__label" for="email">Email</label>
+            <input class="form-field__input" type="email" id="email" placeholder="your@email.com" />
+          </div>
+          <div class="form-field">
+            <label class="form-field__label" for="message">Message</label>
+            <textarea class="form-field__input form-field__input--textarea" id="message" placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button class="btn btn--primary btn--full">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="home" class="page page--home">
+    <div class="page__inner">
+      <div class="hero">
+        <p class="hero__label">Welcome</p>
+        <h1 class="hero__title">Creative Developer</h1>
+        <p class="hero__subtitle">Building elegant digital experiences with clean code and thoughtful design.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#portfolio">View Work</a>
+          <a class="btn btn--outline" href="#contact">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="nav">
+    <a class="nav__brand" href="#home">MyPortfolio</a>
+    <label class="nav__hamburger" for="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <ul class="nav__links">
+      <li><a class="nav__link nav__link--home" href="#home">Home</a></li>
+      <li><a class="nav__link nav__link--about" href="#about">About</a></li>
+      <li><a class="nav__link nav__link--portfolio" href="#portfolio">Portfolio</a></li>
+      <li><a class="nav__link nav__link--contact" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

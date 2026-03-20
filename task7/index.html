@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pure CSS Carousel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="page">
+    <h1 class="page__title">Pure CSS Carousel</h1>
+    <p class="page__sub">Auto-sliding — click a dot to take control</p>
+
+    <div class="carousel">
+
+      <input class="carousel__input" type="radio" name="slides" id="s1" />
+      <input class="carousel__input" type="radio" name="slides" id="s2" />
+      <input class="carousel__input" type="radio" name="slides" id="s3" />
+      <input class="carousel__input" type="radio" name="slides" id="s4" />
+
+      <div class="carousel__track">
+        <div class="carousel__slide carousel__slide--1">
+          <img class="carousel__img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=450&fit=crop" alt="Mountain landscape" />
+          <div class="carousel__caption">
+            <h2 class="carousel__caption-title">Mountain Peaks</h2>
+            <p class="carousel__caption-text">Rise above the clouds</p>
+          </div>
+        </div>
+        <div class="carousel__slide carousel__slide--2">
+          <img class="carousel__img" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&h=450&fit=crop" alt="Ocean at sunset" />
+          <div class="carousel__caption">
+            <h2 class="carousel__caption-title">Ocean Sunset</h2>
+            <p class="carousel__caption-text">Where the sky meets the sea</p>
+          </div>
+        </div>
+        <div class="carousel__slide carousel__slide--3">
+          <img class="carousel__img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&h=450&fit=crop" alt="Forest path" />
+          <div class="carousel__caption">
+            <h2 class="carousel__caption-title">Forest Path</h2>
+            <p class="carousel__caption-text">Wander through the wild</p>
+          </div>
+        </div>
+        <div class="carousel__slide carousel__slide--4">
+          <img class="carousel__img" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=450&fit=crop" alt="Desert dunes" />
+          <div class="carousel__caption">
+            <h2 class="carousel__caption-title">Desert Dunes</h2>
+            <p class="carousel__caption-text">Golden sands at dusk</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel__dots" role="group" aria-label="Slide controls">
+        <label class="carousel__dot" for="s1" aria-label="Go to slide 1"></label>
+        <label class="carousel__dot" for="s2" aria-label="Go to slide 2"></label>
+        <label class="carousel__dot" for="s3" aria-label="Go to slide 3"></label>
+        <label class="carousel__dot" for="s4" aria-label="Go to slide 4"></label>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>

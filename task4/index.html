@@ -11,15 +11,14 @@
   <header class="header">
     <div class="brand">MyBrand</div>
 
-    <!-- Mobile toggle (checkbox hack) -->
     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <label for="nav-toggle" class="nav-toggle-label">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
       <span></span>
       <span></span>
       <span></span>
     </label>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="Main navigation">
       <ul class="nav__list">
         <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
 
@@ -49,8 +48,8 @@
   </header>
 
   <main class="hero">
-    <h1>Pure CSS Dropdown Menu</h1>
-    <p>Hover over <strong>Services</strong> or <strong>Products</strong> to see the dropdown.</p>
+    <h1 class="hero__title">Pure CSS Dropdown Menu</h1>
+    <p class="hero__text">Hover over <strong>Services</strong> or <strong>Products</strong> to see the dropdown.</p>
   </main>
 
 </body>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex Responsive Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__brand">GridFlex</div>
+    <nav class="header__nav" aria-label="Main navigation">
+      <ul class="header__nav-list">
+        <li><a class="header__link" href="#">Home</a></li>
+        <li><a class="header__link" href="#">About</a></li>
+        <li><a class="header__link" href="#">Work</a></li>
+        <li><a class="header__link" href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">Build Modern Layouts</h1>
+      <p class="hero__subtitle">Grid and Flexbox working together.</p>
+      <a class="hero__cta" href="#">Get Started</a>
+    </div>
+    <div class="hero__decor"></div>
+  </section>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2 class="sidebar__title">Topics</h2>
+      <ul class="sidebar__list">
+        <li class="sidebar__item">CSS Grid</li>
+        <li class="sidebar__item">Flexbox</li>
+        <li class="sidebar__item">Positioning</li>
+        <li class="sidebar__item">Responsive</li>
+        <li class="sidebar__item">Animations</li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <h2 class="main__heading">Featured Articles</h2>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card__image card__image--one"></div>
+          <div class="card__body">
+            <h3 class="card__title">Mastering CSS Grid</h3>
+            <p class="card__text">Learn how to build complex two-dimensional layouts with ease.</p>
+            <a class="card__link" href="#">Read More</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__image card__image--two"></div>
+          <div class="card__body">
+            <h3 class="card__title">Flexbox in Depth</h3>
+            <p class="card__text">Align and distribute items along a single axis effortlessly.</p>
+            <a class="card__link" href="#">Read More</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__image card__image--three"></div>
+          <div class="card__body">
+            <h3 class="card__title">Responsive Design</h3>
+            <p class="card__text">Adapt your layout seamlessly across all screen sizes.</p>
+            <a class="card__link" href="#">Read More</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__image card__image--four"></div>
+          <div class="card__body">
+            <h3 class="card__title">Z-index & Stacking</h3>
+            <p class="card__text">Control layer order and overlap with position and z-index.</p>
+            <a class="card__link" href="#">Read More</a>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <aside class="panel">
+      <h2 class="panel__title">Highlights</h2>
+      <div class="panel__stat">
+        <span class="panel__number">12</span>
+        <span class="panel__label">Lessons</span>
+      </div>
+      <div class="panel__stat">
+        <span class="panel__number">4</span>
+        <span class="panel__label">Projects</span>
+      </div>
+      <div class="panel__stat">
+        <span class="panel__number">98%</span>
+        <span class="panel__label">Satisfaction</span>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p class="footer__copy">&copy; 2026 GridFlex. All rights reserved.</p>
+    <div class="footer__links">
+      <a class="footer__link" href="#">Privacy</a>
+      <a class="footer__link" href="#">Terms</a>
+      <a class="footer__link" href="#">Support</a>
+    </div>
+  </footer>
+</body>
+</html>
